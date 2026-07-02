@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admission</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#f5f7fb;
+}
+
+header{
+background:linear-gradient(135deg,#2563eb,#7c3aed);
+color:#fff;
+padding:25px;
+text-align:center;
+}
+
+header h1{
+font-size:35px;
+}
+
+header p{
+margin-top:10px;
+}
+
+.container{
+width:90%;
+margin:auto;
+padding:20px;
+}
+
+.search{
+width:100%;
+padding:15px;
+border-radius:10px;
+border:none;
+box-shadow:0 0 10px rgba(0,0,0,.1);
+margin-bottom:20px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.card{
+background:white;
+padding:20px;
+border-radius:15px;
+text-align:center;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+text-decoration:none;
+color:black;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+background:#2563eb;
+color:white;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>🎓 Admission</h1>
+<p>Learn • Practice • Success</p>
+</header>
+
+<div class="container">
+
+<input class="search" placeholder="🔍 Search">
+
+<div class="grid">
+  <a href="pdf.html" class="card">
+<h2>📚 Class PDF</h2>
+<p>সকল ক্লাসের PDF</p>
+</a>
+
+<a href="routine.html" class="card">
+<h2>📅 Exam Routine</h2>
+<p>সকল পরীক্ষার রুটিন</p>
+</a>
+
+<a href="study.html" class="card">
+<h2>📖 Self Study</h2>
+<p>দৈনিক পড়াশোনার পরিকল্পনা</p>
+</a>
+
+<a href="screen.html" class="card">
+<h2>📱 Phone Screen Time</h2>
+<p>মোবাইল ব্যবহারের সময়</p>
+</a>
+
+<a href="mcq.html" class="card">
+<h2>❓ MCQ Practice</h2>
+<p>অনুশীলন পরীক্ষা</p>
+</a>
+
+<a href="download.html" class="card">
+<h2>📄 PDF Download</h2>
+<p>PDF ডাউনলোড করুন</p>
+</a>
+
+</div>
+
+</div>
+
+<footer style="background:#111827;color:white;text-align:center;padding:20px;margin-top:30px;">
+© 2026 Admission
+</footer>
+<script>
+const search = document.querySelector(".search");
+const cards = document.querySelectorAll(".card");
+
+search.addEventListener("keyup", () => {
+  const value = search.value.toLowerCase();
+
+  cards.forEach(card => {
+    if (card.innerText.toLowerCase().includes(value)) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+  });
+});
+</script>
+
+</body>
+</html>
